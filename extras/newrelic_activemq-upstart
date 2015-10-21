@@ -1,0 +1,16 @@
+description "Easy Taxi - Newrelic Activemq Monitoring service"
+author "Easy Taxi - https://github.com/easytaxibr/newrelic_activemq"
+
+# Change this to the user running the agent
+env USER=activemq
+
+# When to start the service
+start on runlevel [2345]
+
+# When to stop the service
+stop on runlevel [016]
+
+# Automatically restart process if crashed
+respawn
+
+exec start-stop-daemon --start --make-pidfile --pidfile /var/run/newrelic_activemq.pid --chuid $USER --exec /opt/newrelic_activemq/newrelic_activemq.rb
