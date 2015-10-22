@@ -15,10 +15,10 @@ class ActiveMQStats
     queue_stats = queue_stats(xml.xpath("//queue[@name='#{queue_name}']/stats").first)
     QueueData.new(
       queue_name,
-      queue_stats['size'].to_i,
-      queue_stats['consumerCount'].to_i,
-      queue_stats['enqueueCount'].to_i,
-      queue_stats['dequeueCount'].to_i
+      queue_stats['size'],
+      queue_stats['consumerCount'],
+      queue_stats['enqueueCount'],
+      queue_stats['dequeueCount']
     )
   end
 

@@ -1,13 +1,12 @@
 class QueueData
-  attr_accessor :queue_name
-  attr_accessor :size, :consumers, :enqueued, :dequeued
+  attr_accessor :queue_name, :size, :consumers, :enqueued, :dequeued
 
   def initialize(queue_name, size, consumers, enqueued, dequeued)
     self.queue_name = queue_name
-    self.size = size
-    self.consumers = consumers
-    self.enqueued = enqueued
-    self.dequeued = dequeued
+    self.size = Integer(size)
+    self.consumers = Integer(consumers)
+    self.enqueued = Integer(queued)
+    self.dequeued = Integer(dequeued)
   end
 
   def -(last_queue_data)

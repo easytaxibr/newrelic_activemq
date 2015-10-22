@@ -29,11 +29,7 @@ module NewrelicActiveMQ
         activemq_password
       ).request(queue_name)
 
-      data_to_report = if self.last_queue_stats
-                         queue_data - self.last_queue_stats
-                       else
-                         queue_data
-                       end
+      data_to_report = self.last_queue_stats ? (queue_data - self.last_queue_stats) : queue_data
 
       self.last_queue_stats = queue_data
       report(data_to_report)
@@ -47,11 +43,7 @@ module NewrelicActiveMQ
     end
 
     def report_or_print(metric, unit, value)
-      if debug
-        puts "#{metric}[#{unit}]: #{value}"
-      else
-        report_metric(metric, unit, value)
-      end
+      debug ? puts("#{metric}[#{unit}]: #{value}") : report_metric(metric, unit, value)
     end
   end
 
