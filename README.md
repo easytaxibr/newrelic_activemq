@@ -8,19 +8,18 @@ time, and solutions.
 
 ## What is it?
 
-This project was created to monitor ActiveMQ. The main idea is to consume
-ActiveMQ stats page (`/admin/xml/queues.jsp`) and send it to Newrelic.
+This is a Newrelic plugin used to monitor ActiveMQ. The main idea is to parse
+ActiveMQ stats (`/admin/xml/queues.jsp`) and send them to Newrelic.
 
-By now, the metrics sent are:
+Currently, we send the following metrics:
  - Total number of consumers
  - Total queue size
- - Jobs enqueued on the last minute
- - Jobs dequeued on the last minute
+ - Jobs enqueued in the last minute
+ - Jobs dequeued in the last minute
 
-## Installing
+## Installation
 
-The installation process is a simple download of the last release, uncompress
-on the desired folder. Ex:
+Simply download the latest release and uncompress it in the desired folder. Ex:
 
 ```
 $ wget https://github.com/easytaxibr/newrelic_activemq/archive/0.0.1.tar.gz
@@ -29,7 +28,7 @@ $ ln -sf /opt/newrelic_activemq-0.0.1/ /opt/newrelic_activemq
 $ cd /opt/newrelic_activemq && bundle install
 ```
 
-## Configuring
+## Configuration
 
 To configure the project, just copy the `config/newrelic_plugin.yml.sample` to
 `config/newrelic_plugin.yml`:
@@ -64,14 +63,14 @@ For multiple queues, you can simple use an array:
       activemq_password: 123
 ```
 
-## Running
+## Monitor
 
-On the plugin installation folder run:
+In the plugin installation folder run:
 
 ```shell
 $ ./newrelic_activemq.rb
 ```
 
-We strongly encourage to create a startup script. We are providing an example
-on `extra/newrelic_activemq-upstart` for Debian. If you use some other linux
-distribution, we appreciate any PR with the example for your distro.
+We strongly encourage you to create a startup script. We provide an example
+under `extra/newrelic_activemq-upstart` for Debian. We appreciate a PR with
+a sample script of your own distro.
