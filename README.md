@@ -74,3 +74,9 @@ $ ./newrelic_activemq.rb
 We strongly encourage you to create a startup script. We provide an example
 under `extra/newrelic_activemq-upstart` for Debian. We appreciate a PR with
 a sample script of your own distro.
+
+## Can you show me it in action?
+
+Yes, sure.
+
+![](https://github.com/easytaxibr/newrelic_activemq/blob/master/images/newrelic_activemq_running.png)
