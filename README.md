@@ -42,9 +42,9 @@ After that configure the queues you want to monitor. For a single queue:
 ```yaml
   activemq:
     queue_name: lets_monitor
-    activemq_url: http://activemq-server.yourdomain.com:8161
-    activemq_user: admin
-    activemq_password: 123
+    activemq_url: https://activemq-server.yourdomain.com:8161
+    activemq_user: username
+    activemq_password: password
 ```
 
 For multiple queues, you can simple use an array:
@@ -53,14 +53,14 @@ For multiple queues, you can simple use an array:
   activemq:
     -
       queue_name: lets_monitor
-      activemq_url: http://activemq-server.yourdomain.com:8161
-      activemq_user: admin
-      activemq_password: 123
+      activemq_url: https://activemq-server.yourdomain.com:8161
+      activemq_user: username
+      activemq_password: password
     -
       queue_name: lets_monitor_other_queue
-      activemq_url: http://activemq-server.yourdomain.com:8161
-      activemq_user: admin
-      activemq_password: 123
+      activemq_url: https://activemq-server.yourdomain.com:8161
+      activemq_user: username
+      activemq_password: password
 ```
 
 ## Monitor
