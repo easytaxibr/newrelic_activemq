@@ -23,17 +23,17 @@ agents:
   # this is where configuration for agents belongs
   activemq:
     -
-      queue_name: pre_auth
-      activemq_url: http://activemq-staging.easytaxi.net.br:8161
-      activemq_user: admin
-      activemq_password: 123123
+      queue_name: queue1
+      activemq_url: http://activemq-server.yourdomain.com:8161
+      activemq_user: username
+      activemq_password: password
     -
-      queue_name: payment_pay
-      activemq_url: http://activemq-staging.easytaxi.net.br:8161
-      activemq_user: admin
-      activemq_password: 123123
+      queue_name: queue2
+      activemq_url: http://activemq-server.yourdomain.com:8161
+      activemq_user: username
+      activemq_password: password
     -
-      queue_name: token
-      activemq_url: http://activemq-staging.easytaxi.net.br:8161
-      activemq_user: admin
-      activemq_password: 123123
+      queue_name: queue3
+      activemq_url: http://activemq-server.yourdomain.com:8161
+      activemq_user: username
+      activemq_password: password
