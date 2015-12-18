@@ -5,7 +5,7 @@ class QueueData
     self.queue_name = queue_name
     self.size = Integer(size)
     self.consumers = Integer(consumers)
-    self.enqueued = Integer(queued)
+    self.enqueued = Integer(enqueued)
     self.dequeued = Integer(dequeued)
   end
 
