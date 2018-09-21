@@ -22,7 +22,7 @@ Currently, we send the following metrics:
 Simply download the latest release and uncompress it in the desired folder. Ex:
 
 ```
-$ wget https://github.com/easytaxibr/newrelic_activemq/archive/0.0.2.tar.gz
+$ wget https://github.com/easytaxibr/newrelic_activemq/archive/v0.0.2.tar.gz
 $ tar -zxvf 0.0.2.tar.gz -C /opt
 $ ln -sf /opt/newrelic_activemq-0.0.2/ /opt/newrelic_activemq
 $ cd /opt/newrelic_activemq && bundle install
